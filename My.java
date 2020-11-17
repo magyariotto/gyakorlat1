@@ -12,6 +12,6 @@ public class My{
 		
 		Integer eredmeny = elsoSzam + masodikSzam;
 		
-		System.out.println("Eredmeny :" + eredmeny);
+		System.out.println("Eredmeny:" + eredmeny);
 	}
 }
