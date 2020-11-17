@@ -1,1 +1,6 @@
-*.class
+/target/
+/.idea/
+*.iml
+*.db
+*.out
+logs/**
