@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Application {
+public class ForApplication {
     public static void main(String[] args) {
         int[] intArray = new int[]{1, 2, 3, 4};
 
