@@ -31,5 +31,33 @@ public class Application {
         for(int i=0; i<tombHossza; i++){
             System.out.print(tomb[tombHossza-i-1]);
         }
+
+        System.out.println();
+        System.out.println("3.Feladat:");
+
+        System.out.println("Ad meg a nevedet.");
+        String nev = scanner.nextLine();
+
+        System.out.println("Ad meg a nemedet.(ferfi/no)");
+        String nem = scanner.nextLine();
+
+        System.out.println("Ad meg az eletkorodat.");
+        Integer kor = scanner.nextInt();
+
+        if("ferfi".equals(nem)){
+            if(kor < 20){
+                System.out.println("Hello " + nev);
+            }else{
+                System.out.println("Good morning,Mr. " + nev);
+            }
+        }else if("no".equals(nem)){
+            if(kor < 20){
+                System.out.println("Hi,Miss. " + nev);
+            }else{
+                System.out.println("Good morning,Mr. " + nev);
+            }
+        }else{
+            System.out.println("Szia " + nev + ", rosszul irtad be a nemedet.");
+        }
     }
 }
