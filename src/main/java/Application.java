@@ -13,7 +13,7 @@ public class Application {
 
         for(int i = 0; i< szavakSzama; i++){
             Integer szo = darabok[i].length();
-            if( szo > leghosszabbSzo){
+            if( szo >= leghosszabbSzo){
                 leghosszabbSzo = szo;
                 valtozo = i;
             }
