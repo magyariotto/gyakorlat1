@@ -1,9 +1,8 @@
 package jarmu.vizi;
 
-import jarmu.Jarmu;
 import jarmu.Szinek;
 
-public class Hajo extends ViziJarmu implements Jarmu {
+public class Hajo extends ViziJarmu{
     public Integer sebesseg = 0;
 
     public Hajo(Szinek color){
