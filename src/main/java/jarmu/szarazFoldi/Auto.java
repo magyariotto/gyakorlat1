@@ -1,5 +1,7 @@
 package jarmu.szarazFoldi;
 
+import jarmu.Szinek;
+
 public class Auto extends SzarazfoldiJarmu{
     public Integer sebesseg = 0;
 

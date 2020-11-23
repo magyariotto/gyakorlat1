@@ -1,6 +1,7 @@
 package jarmu.szarazFoldi;
 
 import jarmu.Jarmu;
+import jarmu.Szinek;
 
 public abstract class SzarazfoldiJarmu implements Jarmu {
     public static final int Alapsebesseg = 50;

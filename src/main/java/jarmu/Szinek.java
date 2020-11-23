@@ -1,4 +1,4 @@
-package jarmu.szarazFoldi;
+package jarmu;
 
 public enum Szinek {
     Zold("Zold"),
