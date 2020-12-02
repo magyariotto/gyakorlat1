@@ -4,7 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.catchThrowable;
 import static org.junit.Assert.fail;
 
 public class DomperTest {
@@ -76,5 +77,29 @@ public class DomperTest {
         //THEN
         assertThat(ex).isInstanceOf(NemJarAMotorException.class);
         assertThat(underTest.getSebesseg()).isEqualTo(0);
+    }
+
+    @Test
+    public void platoBecsuk(){
+        //GIVEN
+        underTest.platoKinyit();
+        //WHEN
+        underTest.platoBecsuk();
+        //THEN
+        if(underTest.isPlatoNyitva()){
+            throw new AssertionError("A platoNyitva nem lehet true.");
+        }
+    }
+
+    @Test
+    public void domperMegall_haASebessegNemZero(){
+        //GIVEN
+        underTest.motorBeindul();
+        //WHEN
+        underTest.motorMegall();
+        //THEN
+        if(underTest.getSebesseg() != 0){
+            throw new AssertionError("A sebessegnek 0 kell legyen.");
+        }
     }
 }
