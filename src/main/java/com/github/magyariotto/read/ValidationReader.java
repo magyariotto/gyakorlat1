@@ -10,11 +10,11 @@ import java.util.function.Predicate;
 public class ValidationReader {
     private final ConsoleReader consoleReader;
 
-    public String readInput(Predicate<String> validation){
+    public String readInput(Predicate<String> validation) {
         String input;
         do {
             input = consoleReader.readInput();
-        }while (!validation.test(input));
+        } while (!validation.test(input));
 
         return input;
     }
