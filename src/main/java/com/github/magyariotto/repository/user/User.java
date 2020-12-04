@@ -1,13 +1,11 @@
 package com.github.magyariotto.repository.user;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 @Data
 @Builder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor
 public class User {
     private String username;
     private String password;
@@ -19,5 +17,10 @@ public class User {
 
     public void withdrawBalance(int withdrawValue) {
         balance -= withdrawValue;
+    }
+
+
+    public void decreaseBalance(int transferValue) {
+        balance -= transferValue;
     }
 }

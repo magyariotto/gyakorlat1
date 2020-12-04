@@ -13,7 +13,7 @@ public class UserRepository {
         USERS.put(user.getUsername(), user);
     }
 
-    public boolean usernameExists(String username){
+    public boolean usernameExists(String username) {
         return USERS.containsKey(username);
     }
 

@@ -4,6 +4,7 @@ import com.github.magyariotto.read.ConsoleReader;
 import com.github.magyariotto.repository.user.User;
 import com.github.magyariotto.repository.user.UserRepository;
 import com.github.magyariotto.service.DepositService;
+import com.github.magyariotto.service.TransferService;
 import com.github.magyariotto.service.WithdrawService;
 import com.github.magyariotto.util.Session;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +20,7 @@ public class AccountMenu implements Menu {
     private final UserRepository userRepository;
     private final DepositService depositService;
     private final WithdrawService withdrawService;
+    private final TransferService transferService;
 
     @Override
     public void enterMenu() {
@@ -35,6 +37,7 @@ public class AccountMenu implements Menu {
             System.out.println("balance - Check actual balance.");
             System.out.println("deposit - Deposit.");
             System.out.println("withdraw - Withdraw.");
+            System.out.println("transfer - Transfer.");
             System.out.println("logout - Exit application.");
             System.out.println("Choose one command from above:");
 
@@ -50,6 +53,9 @@ public class AccountMenu implements Menu {
                     break;
                 case ACCOUNT_MENU_WITHDRAW_OPTION:
                     withdrawService.withdraw(user);
+                    break;
+                case ACCOUNT_MENU_TRANSFER_OPTION:
+                    transferService.transfer(user);
                     break;
                 case ACCOUNT_MENU_LOGOUT_USER_OPTION:
                     break;
