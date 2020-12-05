@@ -48,6 +48,8 @@ public class TransferService {
 
         target.increaseBalance(transferValue);
         user.decreaseBalance(transferValue);
+        userRepository.save(user);
+        userRepository.save(target);
 
         System.out.println("Transaction succesful.");
     }

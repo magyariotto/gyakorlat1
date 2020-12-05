@@ -7,3 +7,9 @@ registration:
     - username: user2
       password: asdasd
       balance: 100
+
+database:
+  driver: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/bank
+  username: postgres
+  password: postgres
