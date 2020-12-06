@@ -63,7 +63,7 @@ public class Domper {
             throw new NemJarAMotorException();
         }
         if (platoNyitva) {
-            throw new IllegalArgumentException("A plato nyitva.");
+            throw new IllegalStateException("A plato nyitva.");
         }
         if (ujSebesseg > maxSebesseg) {
             throw new IllegalArgumentException("Ez a jarmu nem tud ennyivel menni,a max sebesseg: " + maxSebesseg);
@@ -84,7 +84,7 @@ public class Domper {
 
     public void lerakod() {
         if (!platoNyitva) {
-            throw new IllegalArgumentException("A plato nincs nyitva.");
+            throw new IllegalStateException("A plato nincs nyitva.");
         }
         rakomany = 0;
     }
