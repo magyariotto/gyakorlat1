@@ -22,7 +22,7 @@ public class UsernameValidation implements Predicate<String> {
             result = false;
         }
 
-        if(userRepository.usernameExists(username)){
+        if(userRepository.existsByUsername(username)){
             System.out.println("Username already in use.");
             result = false;
         }

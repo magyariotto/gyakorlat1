@@ -18,7 +18,7 @@ public class UserExistsValidator implements Predicate<String> {
         if(isBlank(username)){
             return true;
         }
-        boolean result = userRepository.usernameExists(username);
+        boolean result = userRepository.existsByUsername(username);
         if(!result){
             System.out.println("User not found.");
         }
