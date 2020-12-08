@@ -1,0 +1,22 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="initial-tag" author="magyariotto">
+        <tagDatabase tag="initial-tag"/>
+    </changeSet>
+
+    <changeSet id="create-table-bank_user" author="magyariotto">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists schemaName="public" tableName="bank_user"/>
+            </not>
+        </preConditions>
+
+        <createTable schemaName="bank" tableName="bank_user">
+            <column name="username" type="text"/>
+            <column name="password" type="text"/>
+            <column name="balance" type="integer"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

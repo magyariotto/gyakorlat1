@@ -5,6 +5,11 @@ spring:
     url: jdbc:postgresql://localhost:5432/bank
     driverClassName: org.postgresql.Driver
 
+liquibase:
+  changelog:
+    location: classpath:/database/changelog-master.xml
+  schema: bank
+
 registration:
   startBalance: 100
   defaultUsers:

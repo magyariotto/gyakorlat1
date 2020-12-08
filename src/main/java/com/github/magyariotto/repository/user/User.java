@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @Entity
-@Table(schema = "public", name = "bank_user")
+@Table(schema = "bank", name = "bank_user")
 public class User {
     @Id
     private String username;
