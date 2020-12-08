@@ -1,6 +1,6 @@
 package com.github.magyariotto.service;
 
-import com.github.magyariotto.Validation.PositivNumberValidation;
+import com.github.magyariotto.validation.PositivNumberValidation;
 import com.github.magyariotto.read.IntegerValidationReader;
 import com.github.magyariotto.repository.user.User;
 import com.github.magyariotto.repository.user.UserRepository;

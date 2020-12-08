@@ -1,4 +1,4 @@
-package com.github.magyariotto.Validation;
+package com.github.magyariotto.validation;
 
 import com.github.magyariotto.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;

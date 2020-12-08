@@ -1,7 +1,7 @@
 package com.github.magyariotto.service;
 
-import com.github.magyariotto.Validation.PositivNumberValidation;
-import com.github.magyariotto.Validation.UserExistsValidator;
+import com.github.magyariotto.validation.PositivNumberValidation;
+import com.github.magyariotto.validation.UserExistsValidator;
 import com.github.magyariotto.read.IntegerValidationReader;
 import com.github.magyariotto.read.ValidationReader;
 import com.github.magyariotto.repository.user.User;
@@ -26,7 +26,7 @@ public class TransferService {
         System.out.println("How much do you want to transfer?.Avaliable balance: " + user.getBalance());
         int transferValue = integerValidationReader.readNumber(positivNumberValidation);
 
-        if(transferValue == 0){
+        if (transferValue == 0) {
             System.out.println("Transaction cancelled.");
             return;
         }
@@ -39,7 +39,7 @@ public class TransferService {
 
         System.out.println("Who do you want to send money to?");
         String username = validationReader.readInput(userExistsValidator);
-        if(isBlank(username)){
+        if (isBlank(username)) {
             return;
         }
 

@@ -1,4 +1,4 @@
-package com.github.magyariotto.Validation;
+package com.github.magyariotto.validation;
 
 import org.springframework.stereotype.Component;
 

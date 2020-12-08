@@ -1,7 +1,7 @@
 package com.github.magyariotto.menu;
 
-import com.github.magyariotto.Validation.PasswordValidation;
-import com.github.magyariotto.Validation.UsernameValidation;
+import com.github.magyariotto.validation.PasswordValidation;
+import com.github.magyariotto.validation.UsernameValidation;
 import com.github.magyariotto.read.ValidationReader;
 import com.github.magyariotto.repository.user.User;
 import com.github.magyariotto.repository.user.UserRepository;

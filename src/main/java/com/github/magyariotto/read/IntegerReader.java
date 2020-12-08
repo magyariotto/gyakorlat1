@@ -1,6 +1,6 @@
 package com.github.magyariotto.read;
 
-import com.github.magyariotto.Validation.IntegerValidator;
+import com.github.magyariotto.validation.IntegerValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
