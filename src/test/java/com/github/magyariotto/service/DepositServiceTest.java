@@ -13,7 +13,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
-import static org.mockito.Mockito.times;
 
 @RunWith(MockitoJUnitRunner.class)
 public class DepositServiceTest {
@@ -45,10 +44,9 @@ public class DepositServiceTest {
         //WHEN
         underTest.deposit(user1);
         //THEN
-        then(user1).should().getBalance();
+        then(user1).should().increaseBalance(0);
         then(user1).shouldHaveNoMoreInteractions();
-        then(validationReader).shouldHaveNoInteractions();
-        then(userRepository).shouldHaveNoInteractions();
+        then(userRepository).should().save(user1);
     }
 
     @Test
@@ -56,11 +54,10 @@ public class DepositServiceTest {
         //GIVEN
         given(integerValidationReader.readNumber(positivNumberValidation))
                 .willReturn(DEPOSIT_VALUE);
-        given(user1.getBalance()).willReturn(DEPOSIT_VALUE + 1);
         //WHEN
         underTest.deposit(user1);
         //THEN
-        then(integerValidationReader).should(times(2))
+        then(integerValidationReader).should()
                 .readNumber(positivNumberValidation);
         then(user1).should().increaseBalance(DEPOSIT_VALUE);
         then(userRepository).should().save(user1);
