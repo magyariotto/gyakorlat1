@@ -7,5 +7,26 @@
             <INPUT type="text" name="username" placeholder="Username">
             <BUTTON>Submit</BUTTON>
         </FORM>
+
+        <DIV>
+            <INPUT type="text" id="username" placeholder="Username with JSON">
+            <BUTTON onclick="upload()">Submit</BUTTON>
+        </DIV>
+        <SCRIPT>
+            function upload(){
+                const username = document.getElementById("username").value;
+
+                const requestBody = {
+                    username: username
+                }
+
+                const request = new XMLHttpRequest();
+                    request.open("POST", "/api/input", 0);
+                    request.setRequestHeader("Content-Type", "application/json");
+                    request.send(JSON.stringify(requestBody));
+
+                window.location.href = "/ajax_input";
+            }
+        </SCRIPT>
     </BODY>
 </HTML>

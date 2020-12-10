@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <TITLE>Ajax input Page</TITLE>
+    </HEAD>
+    <BODY>
+        <DIV>
+            Hello, <SPAN id="input"></SPAN>
+        </DIV>
+        <SCRIPT>
+            const request = new XMLHttpRequest();
+                request.open("GET", "/api/input", 0);
+                request.send();
+
+            document.getElementById("input").innerHTML = JSON.parse(request.responseText).username;
+        </SCRIPT>
+    </BODY>
+</HTML>
